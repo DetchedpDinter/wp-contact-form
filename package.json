@@ -1,0 +1,38 @@
+{
+  "name": "wp-contact-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tailwindcss -i src/index.css -o build/index.css --minify",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@dnd-kit/accessibility": "^3.1.1",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@wordpress/blocks": "^14.9.0",
+    "@wordpress/element": "^6.20.0",
+    "@wordpress/i18n": "^5.20.0",
+    "@wordpress/scripts": "^30.13.0",
+    "chart.js": "^4.4.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
+    "react-signature-canvas": "^1.1.0-alpha.1",
+    "vite": "^6.2.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.14",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.14",
+    "vite-plugin-static-copy": "^2.3.0"
+  }
+}

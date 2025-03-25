@@ -1,0 +1,7 @@
+# WordPress Plugin Git Ignore
+node_modules/
+vendor/
+*.log
+.DS_Store
+.idea/
+*.zip
