@@ -53,15 +53,7 @@ function cfp_add_admin_menu()
         'cfp-form-entries-graph',
         'cfp_render_entries_graph_page'
     );
-}
-add_action('admin_menu', 'cfp_add_admin_menu');
 
-function cfp_render_entries_graph_page()
-{
-    echo '<div class="wrap"><div id="cfp-entries-graph-root"></div></div>';
-}
-
-add_action('admin_menu', function () {
     add_submenu_page(
         'edit.php?post_type=cfp_form',
         'All Forms',
@@ -70,7 +62,13 @@ add_action('admin_menu', function () {
         'cfp-custom-forms-page',
         'cfp_render_custom_forms_page'
     );
-});
+}
+add_action('admin_menu', 'cfp_add_admin_menu');
+
+function cfp_render_entries_graph_page()
+{
+    echo '<div class="wrap"><div id="cfp-entries-graph-root"></div></div>';
+}
 
 function cfp_render_custom_forms_page()
 {

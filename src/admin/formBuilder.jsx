@@ -137,7 +137,7 @@ const FormBuilder = ({ data }) => {
 
   const updateElement = (id, key, value) => {
     setElements((prevElements) =>
-      prevElements.map((el) => (el.id === id ? { ...el, [key]: value } : el))
+      prevElements.map((el) => (el.id === id ? { ...el, [key]: value } : el)),
     );
 
     if (selectedElement?.id === id) {
@@ -197,6 +197,7 @@ const FormBuilder = ({ data }) => {
                       setSelectedElement={setSelectedElement}
                       selectedElement={selectedElement}
                     />
+                    <input type="hidden" name="status" value="NEW" />
                     <button
                       onClick={submitForm}
                       className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 mt-4"

@@ -6,6 +6,7 @@
  * Description: A custom contact form plugin using React, Vite, and Tailwind CSS.
  * Version: 1.0.0
  * Author: Sandip Mishra
+ * Author URI: https://sandipmishra.site
  */
 
 // Prevent direct access
@@ -79,6 +80,10 @@ require_once CFP_PLUGIN_DIR . 'includes/cfp_rest_api.php';
 require_once CFP_PLUGIN_DIR . 'includes/cfp_entries_cpt.php';
 require_once CFP_PLUGIN_DIR . 'includes/cfp_rest_api_entries.php';
 require_once CFP_PLUGIN_DIR . 'includes/cfp_entries_admin_page.php';
+require_once CFP_PLUGIN_DIR . 'includes/cfp_notification.php';
+require_once CFP_PLUGIN_DIR . 'includes/telegram.php';
+require_once CFP_PLUGIN_DIR . 'includes/cfp_timeline.php';
+require_once CFP_PLUGIN_DIR . 'includes/cfp-lead-notes.php';
 
 /**
  * Enqueue Gutenberg Block Assets
@@ -422,4 +427,23 @@ function cfp_render_form_shortcode($atts)
     ob_start();
     echo '<div id="cfp-form-render" data-form-id="' . esc_attr($form_id) . '"></div>';
     return ob_get_clean();
+}
+
+add_action('phpmailer_init', 'cfp_configure_smtp');
+
+function cfp_configure_smtp($phpmailer)
+{
+    $phpmailer->isSMTP();
+
+    $phpmailer->Host = 'smtp.gmail.com';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 587;
+
+    $phpmailer->Username = 'sandipmishra777@gmail.com';
+    $phpmailer->Password = 'yiwl adgu gaje ormw';
+
+    $phpmailer->SMTPSecure = 'tls';
+
+    $phpmailer->From = 'sandipmishra777@gmail.com';
+    $phpmailer->FromName = 'Lead Automation System';
 }

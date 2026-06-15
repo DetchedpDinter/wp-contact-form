@@ -20,16 +20,16 @@ export default defineConfig({
         "admin/formBuilder": resolve(__dirname, "src/admin/formBuilder.jsx"), // Form Builder Admin Panel
         "admin/editFormBuilder": path.resolve(
           __dirname,
-          "src/admin/EditForm.jsx"
+          "src/admin/EditForm.jsx",
         ), // Edit Form Admin Panel
         "frontend/form-frontend": resolve(
           __dirname,
-          "src/frontend/form-frontend.jsx"
+          "src/frontend/form-frontend.jsx",
         ), // Frontend Form Rendering
         "admin/entries": resolve(__dirname, "src/admin/entries.jsx"),
         "admin/entriesGraph": resolve(
           __dirname,
-          "src/admin/EntriesGraphPage.jsx"
+          "src/admin/EntriesGraphPage.jsx",
         ),
       },
       output: {
