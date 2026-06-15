@@ -1,99 +1,110 @@
-# 📨 WP Contact Form Plugin
+# 🚀 Lead Automation Plugin for WordPress
 
-A custom-built, lightweight contact form plugin for WordPress — powered by **React**, **Vite**, and **Tailwind CSS**. This plugin lets you visually build forms, store them as JSON using WordPress Custom Post Types, and handle submissions through a custom REST API.
+A custom WordPress automation plugin designed to capture, organize, and manage leads efficiently. Built to reduce manual work, streamline lead handling, and provide businesses with a centralized lead management workflow directly inside WordPress.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- ⚛️ React-based drag & drop form builder
-- 🗂️ Forms saved as Custom Post Types (`cfp_form`)
-- 🔘 Supports all standard form fields (text, email, textarea, select, checkbox, radio, date, file upload, etc.)
-- 💾 Form submissions stored and retrievable from WP admin
-- 📊 Entries graph page (grouped by year)
-- 📥 Custom entries page with dynamic column rendering
-- 🔐 Secured with REST API + Nonce
+* 📥 Automated lead capture from website forms
+* 🗂️ Lead storage using custom WordPress database structures
+* 📊 Admin dashboard for managing and reviewing leads
+* 🔍 Search and filter functionality
+* 📧 Lead notification workflow
+* 🔐 Secure data handling with WordPress best practices
+* ⚡ Lightweight and optimized for performance
+* 🎯 Designed for business lead generation workflows
 
 ---
 
 ## 🧰 Tech Stack
 
-- **Frontend**: React, Vite, Tailwind CSS
-- **Backend**: WordPress PHP, REST API, CPT
-- **Build Tool**: Vite
+### Backend
+
+* PHP
+* WordPress Plugin API
+* WordPress Database API
+* WordPress Admin Interface
+
+### Frontend
+
+* React
+* Vite
+* Tailwind CSS
 
 ---
 
 ## 📦 Installation
 
-1. Clone this repository into your WordPress `plugins/` folder:
-   ```bash
-   git clone https://github.com/DetchedpDinter/wp-contact-form.git
+1. Clone the repository into your WordPress plugins directory:
 
-2. Navigate into the plugin folder:
+```bash
+git clone https://github.com/DetchedpDinter/lead-automation-plugin.git
+```
 
-   cd wp-contact-form
+2. Navigate to the plugin directory:
 
-3. Install frontend dependencies:
+```bash
+cd lead-automation-plugin
+```
 
-   npm install
+3. Install dependencies:
+
+```bash
+npm install
+```
 
 4. Build production assets:
 
-   npm run build
+```bash
+npm run build
+```
 
-5. Activate the plugin from the WordPress Admin panel.
+5. Activate the plugin from the WordPress Admin Dashboard.
 
 ---
 
 ## 🧪 Development
 
-For live reloading while developing the React form builder:
+Run the development environment:
 
-   npm run dev
+```bash
+npm run dev
+```
 
----
+Build production assets:
 
-## 🧠 Usage
-
-    Go to Forms > Add New Form to open the builder.
-
-    Save your form — it’s stored as a custom post.
-
-    Use the generated shortcode like:
-
-    [cfp_form id="123"]
-
-    View submitted entries under Forms > Entries.
-
-    Analyze yearly trends in Forms > Entries Graph.
+```bash
+npm run build
+```
 
 ---
 
 ## 📁 Project Structure
 
-    wp-contact-form/
-      ├── includes/                # PHP backend logic (menus, pages, REST)
-      ├── src/                     # React form builder source code
-      ├── dist/                    # Built frontend assets (auto-generated)
-      ├── wp-contact-form.php      # Plugin bootstrap
-      ├── package.json             # Frontend dependencies and scripts
-      ├── vite.config.js           # Vite build config
-      └── README.md                # This file
+```text
+lead-automation-plugin/
+├── includes/              # Core PHP logic
+├── admin/                 # Admin dashboard components
+├── src/                   # React frontend source
+├── dist/                  # Production build assets
+├── assets/                # Static assets
+├── plugin.php             # Plugin bootstrap
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
 ---
 
-## 📦 Built With
+## 🎯 Use Cases
 
-    React
-
-    Vite
-
-    Tailwind CSS
-
-    Native WordPress REST API
-
-    Custom Post Types (CPTs)
+* Local service businesses
+* Agencies
+* Real estate lead collection
+* Appointment inquiries
+* Sales lead management
+* Customer inquiry tracking
 
 ---
 
@@ -105,4 +116,6 @@ MIT License
 
 ## 👨‍💻 Author
 
-  Made with 💻 by DetchedpDinter
+Built by DetchedpDinter
+
+Custom WordPress Development • Automation Solutions • Business Workflow Optimization
